@@ -1,0 +1,73 @@
+.settings-container {
+	padding: 24px;
+	max-width: 460px;
+	margin: 0 auto;
+	color: #e0e0e0;
+	background: #1e1e1e;
+	min-height: 100vh;
+}
+
+.settings-heading {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0 0 20px;
+	color: #f0f0f0;
+}
+
+.settings-form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.settings-label {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	font-size: 13px;
+	font-weight: 500;
+	color: #c0c0c0;
+}
+
+.settings-input,
+.settings-select {
+	padding: 8px 10px;
+	border: 1px solid #444;
+	border-radius: 6px;
+	font-size: 14px;
+	background: #2a2a2a;
+	color: #e0e0e0;
+}
+
+.settings-input:focus,
+.settings-select:focus {
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.settings-hint {
+	font-size: 11px;
+	color: #777;
+}
+
+.settings-save-btn {
+	padding: 10px 20px;
+	background: #3b82f6;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	margin-top: 8px;
+}
+
+.settings-save-btn:hover {
+	background: #2563eb;
+}
+
+.settings-select option {
+	background: #2a2a2a;
+	color: #e0e0e0;
+}

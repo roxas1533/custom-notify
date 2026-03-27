@@ -1,0 +1,43 @@
+[package]
+name = "custom-notify"
+version = "0.1.0"
+description = "Custom notification display app"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "custom_notify_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "custom-protocol"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+tokio = { version = "1", features = ["rt", "net", "time", "sync", "macros"] }
+axum = "0.7"
+tower-http = { version = "0.6", features = ["cors"] }
+uuid = { version = "1", features = ["v4"] }
+dirs = "6"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Profile for cross-compiling standalone Windows build.
+# inherits from release so PROFILE="release" -> tauri embeds frontend.
+# opt-level=0 for fast compilation, debug=true for debug symbols.
+[profile.dev-win]
+inherits = "release"
+opt-level = "s"
+debug = true
+debug-assertions = true
+lto = "thin"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
