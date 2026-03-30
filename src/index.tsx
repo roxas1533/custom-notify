@@ -18,7 +18,7 @@ function App() {
 	}
 
 	return (
-		<Switch fallback={<div />}>
+		<Switch fallback={<div style="background:red;color:white;padding:20px;font-size:16px">No match: label="{label}"</div>}>
 			<Match when={label.startsWith("notification_")}>
 				<NotificationView />
 			</Match>
