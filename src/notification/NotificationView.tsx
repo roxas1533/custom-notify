@@ -99,13 +99,9 @@ export default function NotificationView() {
 								{(url) => <img class="notification-icon" src={url()} alt="" />}
 							</Show>
 							<span class="notification-title">{notif().title}</span>
-							<button
-								type="button"
-								class="notification-close"
-								onClick={handleClose}
-							>
+							<span class="notification-close" aria-hidden="true">
 								&times;
-							</button>
+							</span>
 						</div>
 						<div class="notification-body">{notif().body}</div>
 					</button>

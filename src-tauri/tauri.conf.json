@@ -14,7 +14,7 @@
     "security": {
       "csp": {
         "default-src": "'self'",
-        "connect-src": "ipc: http://ipc.localhost",
+        "connect-src": "ipc: http://ipc.localhost http://tauri.localhost",
         "img-src": "'self' https: http:",
         "style-src": "'self'"
       }
