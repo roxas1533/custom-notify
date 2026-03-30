@@ -121,8 +121,9 @@ pub async fn show_notification(
         settings.notification_height as f64,
     )
     .position(x, y)
-    .decorations(true)
-    .transparent(false)
+    .decorations(false)
+    .transparent(true)
+    .shadow(false)
     .always_on_top(true)
     .skip_taskbar(true)
     .resizable(false)

@@ -2,6 +2,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { getCurrentWebviewWindow } from "@tauri-apps/api/webviewWindow";
 import { Match, Switch } from "solid-js";
 import { render } from "solid-js/web";
+import "./base.css";
 import NotificationView from "./notification/NotificationView";
 import SettingsView from "./settings/SettingsView";
 
